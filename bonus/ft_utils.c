@@ -46,15 +46,29 @@ void	ft_putstr(int fd, char *str)
 		i++;
 	}
 }
-/*
-int	ft_abs(int n)
+
+int	ft_strcmp(char *s1, char *s2)
 {
-	if (n < 0)
-		n = -n;
-	return (n);
-}*/
+	int	i;
+
+	i = 0;
+	while (s1[i] && s2[i] && s1[i] == s2[i])
+		i++;
+	return (s1[i] - s2[i]);
+}
 
 void	error(void)
 {
 	ft_putstr(2, "Error\n");
+}
+
+int	is_sorted(t_list *lst)
+{
+	while (lst -> next != NULL)
+	{
+		if (lst -> data > lst -> next -> data)
+			return (0);
+		lst = lst -> next;
+	}
+	return (1);
 }

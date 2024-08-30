@@ -59,10 +59,6 @@ int			ft_isint(int ac, char **av);
 int			ft_isempty(char **av);
 int			argument_checks(int ac, char **av);
 
-// FT_UTILS.C
-void		ft_putstr(int fd, char *str);
-void		error(void);
-
 // FT_LINKED_LIST_MANAGER.C
 t_list		*create_node(int data);
 t_list		*store_node(int size, char **digit);
@@ -70,13 +66,12 @@ void		add_node_back(t_list **lst, t_list *new_node);
 void		free_lst(t_list *node);
 void		ft_lstclear(t_list **lst);
 
-int			is_sorted(t_list *lst);
-//void		move_min_to_top(t_list **a);
-
 // FT_UTILS.C
 long int	ft_atol(char *str);
 void		ft_putstr(int fd, char *str);
 void		error(void);
+int			is_sorted(t_list *lst);
+int			ft_strcmp(char *s1, char *s2);
 
 // GET_NEXT_LINE
 char		*get_next_line(int fd);
