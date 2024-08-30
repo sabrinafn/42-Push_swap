@@ -77,7 +77,6 @@ int	main(int ac, char **av)
 
 	if (ac > 1)
 	{
-		printf("here???\n");
 		if (argument_checks(ac, av))
 		{
 			a = store_node(ac, av);
