@@ -74,7 +74,6 @@ int			is_sorted(t_list *lst);
 //void		move_min_to_top(t_list **a);
 
 // FT_UTILS.C
-//int			ft_abs(int n);
 long int	ft_atol(char *str);
 void		ft_putstr(int fd, char *str);
 void		error(void);
