@@ -87,11 +87,12 @@ int	main(int ac, char **av)
 				ft_lstclear(&a);
 				return (0);
 			}
-			if (is_sorted(a))
+			if (is_sorted(a) && b == NULL)
 				ft_putstr(1, "OK\n");
 			else
 				ft_putstr(1, "KO\n");
 			ft_lstclear(&a);
+			ft_lstclear(&b);
 		}
 		else
 			error();
