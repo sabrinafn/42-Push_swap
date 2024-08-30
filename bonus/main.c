@@ -59,6 +59,12 @@ int	read_and_sort(t_list **a, t_list **b)
 	return (error_found);
 }
 
+void	clear_both(t_list **a, t_list **b)
+{
+	ft_lstclear(a);
+	ft_lstclear(b);
+}
+
 int	main(int ac, char **av)
 {
 	t_list	*a;
@@ -72,16 +78,15 @@ int	main(int ac, char **av)
 			b = NULL;
 			if (read_and_sort(&a, &b) == -1)
 			{
+				clear_both(&a, &b);
 				error();
-				ft_lstclear(&a);
 				return (0);
 			}
 			if (is_sorted(a) && b == NULL)
 				ft_putstr(1, "OK\n");
 			else
 				ft_putstr(1, "KO\n");
-			ft_lstclear(&a);
-			ft_lstclear(&b);
+			clear_both(&a, &b);
 		}
 		else
 			error();
