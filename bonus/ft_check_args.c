@@ -36,7 +36,7 @@ int	ft_isdigit(int ac, char **av)
 	while (i < ac)
 	{
 		j = 0;
-		if (av[i][j] == '-' && av[i][j + 1] != '\0')
+		if ((av[i][j] == '-' || av[i][j] == '+') && av[i][j + 1] != '\0')
 			j++;
 		while (av[i][j] != '\0')
 		{
