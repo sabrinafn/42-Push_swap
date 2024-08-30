@@ -54,20 +54,19 @@ int	push_swap(t_list **a, t_list **b, char *ops)
 int	read_and_sort(t_list **a, t_list **b)
 {
 	char	*str;
+	int	error_found;
 
+	error_found = 0;
 	while (1)
 	{
 		str = get_next_line(0);
 		if (str == NULL)
 			break ;
 		if (push_swap(a, b, str) == 0)
-		{
-			free(str);
-			return (-1);
-		}
+			error_found = -1;
 		free(str);
 	}
-	return (1);
+	return (error_found);
 }
 
 int	main(int ac, char **av)
