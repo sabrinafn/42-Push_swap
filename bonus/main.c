@@ -44,7 +44,7 @@ int	push_swap(t_list **a, t_list **b, char *ops)
 int	read_and_sort(t_list **a, t_list **b)
 {
 	char	*str;
-	int	error_found;
+	int		error_found;
 
 	error_found = 0;
 	while (1)

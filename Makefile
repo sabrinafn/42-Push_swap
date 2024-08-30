@@ -25,7 +25,6 @@ CFILES :=	main.c \
 			ft_ops_swap.c
 
 CBONUS :=	./bonus/main.c \
-			./bonus/ft_linked_list_utils.c \
 			./bonus/ft_linked_list_manager.c \
 			./bonus/ft_utils.c \
 			./bonus/ft_check_args.c \
