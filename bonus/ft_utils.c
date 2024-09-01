@@ -64,6 +64,8 @@ void	error(void)
 
 int	is_sorted(t_list *lst)
 {
+	if (!lst) // delete after maybe
+		return (-1); // delete after maybe 
 	while (lst -> next != NULL)
 	{
 		if (lst -> data > lst -> next -> data)
